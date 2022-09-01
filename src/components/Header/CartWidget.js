@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import image from "../components/cart.jpg";
+import image from "./cart.jpg";
 
 export default class CartWidget extends Component {
   render() {
