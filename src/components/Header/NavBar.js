@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './CartWidget';
 
+
 function NavBar() {
   return (
     <>
@@ -11,10 +12,10 @@ function NavBar() {
           <CartWidget />
           <Navbar.Brand href="#home">HardwareStore</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#features">Productos</Nav.Link>
-            <Nav.Link href="#pricing">Nosotros</Nav.Link>
-            <Nav.Link href="#location">Ubicacion</Nav.Link>
+            <Nav.Link href="/">Inicio</Nav.Link>
+            <Nav.Link href="/productos/Lacteos">Lacteos</Nav.Link>
+            <Nav.Link href="/productos/Carnes">Carnes</Nav.Link>
+            <Nav.Link href="/productos/Comestibles">Comestibles</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
