@@ -6,6 +6,7 @@ export const stock = [
       pictureUrl: 'https://vsa-market.online/tienda/1524-home_default/beldent-chicle-sabor-menta-sin-azucares-10gr.jpg',
       desc: 'hola',
       category:'Comestibles',
+      stock: 3,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const stock = [
     pictureUrl: 'https://images.rappi.com.ar/products/8b4f4ebd-a1e0-49a7-a946-83fbc4823eda.png?d=200x200&e=webp',
     desc: 'hola',
     category:'Lacteos',
+    stock: 4,
 },
 {
   id: 3,
@@ -22,6 +24,7 @@ export const stock = [
   pictureUrl: 'https://atomoconviene.com/atomo-ecommerce/60986-home_default/carne-novillo-millan-molida-500-gr-.jpg',
   desc: 'hola',
   category:'Carnes',
+  stock: 5,
 
 },
 ]
