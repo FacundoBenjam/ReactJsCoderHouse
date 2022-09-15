@@ -1,24 +1,20 @@
-import { useState } from 'react'
 
-const Counter = ({max}) => {
 
- const [counter, setCounter] = useState(1)
+const Counter = ({max, counter, setCounter, handleAgregar }) => {
 
- const handleRestar = () => {
-  if(counter > 1) {
-    setCounter(counter - 1)
+
+  const handleRestar = () => {
+    if(counter > 1) {
+      setCounter(counter - 1)
+    }
+   }
+  
+  
+   const handleSumar = () => {
+    if(counter < max) {
+      setCounter(counter + 1)
+    }
   }
- }
-
-
- const handleSumar = () => {
-  if(counter < max) {
-    setCounter(counter + 1)
-  }
-}
-
-
-
 
    return (
     <div>
@@ -36,6 +32,11 @@ const Counter = ({max}) => {
        
       >+</button>
 
+
+      <br/>
+      <button onClick={handleAgregar } className='btn btn-success my-2'>
+        Agregar al carrito
+      </button>
     </div>
    )
 

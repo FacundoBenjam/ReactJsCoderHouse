@@ -4,20 +4,14 @@ import NavBar from './components/Header/NavBar';
 import ItemContainerList from './components/ItemListContainer/ItemContainerList';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import { CartContext } from './context/CartContext';
-import { useState } from "react"
+import { CartProvider } from './context/CartContext';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
 
-  const [cart, setCart] = useState([])
-
-
   return <>
- <CartContext.Provider value={ {
-  cart,
-  setCart
- } }>
+ <CartProvider>
   
  <BrowserRouter>
 
@@ -27,11 +21,13 @@ function App() {
       <Route path='/' element={ <ItemContainerList /> } />
       <Route path='/productos/:categoryId' element={ <ItemContainerList /> } />
       <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+      <Route path='/cart' element={<Cart />} />
+
     </Routes>
 
   </BrowserRouter>
 
-  </CartContext.Provider>   
+  </CartProvider>   
  
 
   </>;
