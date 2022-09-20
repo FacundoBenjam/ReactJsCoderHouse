@@ -35,6 +35,8 @@ console.log(cart)
         <p>{item.desc}</p>
         <p>{item.category}</p>
         <h4>{item.price}</h4>
+
+        {item.promo && <h5 style={{color: 'red'}}>{item.promo}% OFF !!</h5>}
         <hr/>
             
             {isInCart(item.id) && <p>el item ya a sido agregado</p>}

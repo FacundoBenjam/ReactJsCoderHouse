@@ -7,6 +7,7 @@ export const stock = [
       desc: 'hola',
       category:'Comestibles',
       stock: 3,
+      promo: null,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const stock = [
     desc: 'hola',
     category:'Lacteos',
     stock: 4,
+    promo: 20,
 },
 {
   id: 3,
@@ -25,6 +27,7 @@ export const stock = [
   desc: 'hola',
   category:'Carnes',
   stock: 5,
+  promo: null,
 
 },
 ]

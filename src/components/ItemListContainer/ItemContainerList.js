@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ItemList from '../Items/ItemList';
 import { useParams } from 'react-router-dom';
 import { pedirDatos } from '../../helpers/pedirDatos';
+import Loader from '../Loader.js/Loader';
 
 
 const ItemContainerList = () => {
@@ -37,7 +38,7 @@ const { categoryId } = useParams()
     <div>
       {
         loading
-        ? <h2>Cargando...</h2>
+        ? <Loader/>
         : <ItemList productos={productos} />
       }
     </div>

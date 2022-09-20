@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+import Item from '../components/Item/Item';
 
 
 
@@ -12,6 +13,14 @@ export const CartProvider = ({children}) => {
   const addToCart = (item) => {
     setCart([...cart, item])
 
+  }
+
+  const increaseQuantityInCart = (id) => {
+    
+  }
+
+  const removeItem = (id) => {
+    setCart( cart.filter((Item) => Item.id !== id) )
   }
 
    const isInCart = (id) => {
@@ -37,7 +46,8 @@ export const CartProvider = ({children}) => {
   isInCart,
   cartQuantity,
   cartTotal,
-  emptyCart
+  emptyCart,
+  removeItem,
  }}>
        {children}
        </CartContext.Provider>
