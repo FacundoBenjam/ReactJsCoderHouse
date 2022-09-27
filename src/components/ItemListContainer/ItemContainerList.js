@@ -34,7 +34,6 @@ const { categoryId } = useParams()
          })
   }, [categoryId])
 
-
   return (
     <div>
       {
