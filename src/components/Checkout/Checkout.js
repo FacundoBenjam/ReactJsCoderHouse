@@ -8,7 +8,7 @@ import {db} from '../../firebase/config'
 
 const Checkout = () => {
 
-   const { cart, cartTotal } = useCartContext()
+   const { cart, cartTotal, terminarCompraConSwal } = useCartContext()
    
 
    const [values, setValues] = useState({
@@ -38,6 +38,7 @@ const Checkout = () => {
             total: cartTotal()
           }
 
+
           if(values.nombre.lenght < 3) {
             alert("nombre incorrecto")
             return
@@ -53,13 +54,15 @@ const Checkout = () => {
           addDoc(ordenesRef, orden)
                .then((doc) => {
                 console.log(doc.id)
+                terminarCompraConSwal(doc.id)
                })
  
    }
+   
+   if (cart.length === 0) {
+    return <Navigate to="/"/>
+}
 
-   if (cart.lenght === 0) {
-    return ( <Navigate to="/"/>)
-   }
 
   return (
     <div className='container my-5'>
