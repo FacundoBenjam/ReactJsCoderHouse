@@ -34,6 +34,7 @@ if(cart.length === 0) {
 
           <h4>Total ${cartTotal()}</h4>
           <button onClick={emptyCart} className='btn btn-danger' >Vaciar carrito</button>
+          <Link className="btn btn-success mx-3" to="/Checkout">Terminar mi compra</Link>
     </div>
   )
 }
